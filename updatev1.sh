@@ -98,7 +98,7 @@ if [ "$1" == "--clean" ]; then
 fi
 
 # Update and reboot
-if [ "$1" == "--reboot"]; then
+if [ "$1" == "--reboot" ]; then
   update
   remove
   clean
@@ -106,7 +106,7 @@ if [ "$1" == "--reboot"]; then
   leave
 fi
 
-if ["$1" == "--shutdown"]; then
+if [ "$1" == "--shutdown" ]; then
   update
   remove
   clean

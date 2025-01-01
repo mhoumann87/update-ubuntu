@@ -84,14 +84,7 @@ _EOF_
 
 # Execution
 
-echo "Update - Update and clean your Linux System (Version 1)"
-
-# Update
-if ["$1" == " "]; then
-  update
-  snap
-  leave
-fi
+echo "Update - Update and clean your Linux System (Version 1.5)"
 
 # Update and remove useless packages
 if [ "$1" == "--remove" ]; then
@@ -111,7 +104,7 @@ if [ "$1" == "--clean" ]; then
 fi
 
 # Update and reboot
-if [ "$1" == "--reboot"]; then
+if [ "$1" == "--reboot" ]; then
   update
   remove
   clean
@@ -120,7 +113,7 @@ if [ "$1" == "--reboot"]; then
   leave
 fi
 
-if ["$1" == "--shutdown"]; then
+if [ "$1" == "--shutdown" ]; then
   update
   remove
   clean
@@ -146,4 +139,5 @@ fi
 # Update
 
 update
+snap
 leave
